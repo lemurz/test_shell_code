@@ -1,0 +1,6 @@
+- permission changing
+- directory navigation
+- connecting the gnu compiler to the terminal
+- checking versions of softwares
+
+- perfect version of program must be in 'main' branch
