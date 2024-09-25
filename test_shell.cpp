@@ -11,15 +11,17 @@ class FileHandler{
     public :
 
         void help(){
-            cout<<"Usage : .test_shell.exe <operation> <source> <destination>"<<endl;
             cout << "Operations:" << endl;
-            cout << "  copy    - Copy a file or directory" << endl;
-            cout << "  move    - Move a file or directory" << endl;
-            cout << "  rename  - Rename a file or directory" << endl;
-            cout << "  dcreate  - Create a directory" << endl;
-            cout << "  fcreate  - Create a file" << endl;
-            cout << "  perm  - See the permissions for a file" << endl;
-            cout << "  exit  - Exit the CustomShell" << endl;
+            cout << "  copy <source_path> <dest_path>  - Copy a file or directory" << endl;
+            cout << "  move <source path> <dest_path   - Move a file or directory" << endl;
+            cout << "  rename <source path> - Rename a file or directory" << endl;
+            cout << "  dcreate <source_path>  - Create a directory" << endl;
+            cout << "  fcreate <source_path> - Create a file" << endl;
+            cout << "  perm <source_path> - See the permissions for a file" << endl;
+            cout << "  cd <source_path> - Change Directory" << endl;
+            cout << "  compile <source_path> <dest_path> - Compile C/C++ program" << endl;
+            cout << "  run <source_path> - Run C/C++ executable" << endl;
+            cout << "  exit  - Exit the CustomShell" << endl; 
             cout << endl;
             cout << "Options:" << endl;
             cout << "  --help, -h    - Show this help message" << endl;
@@ -238,9 +240,9 @@ class CustomShell{
                 getline(iss, arg2, '"');
 
                 arg1 = fh.strip_quotes(arg1);
-                //cout<<arg1<<endl;
+                cout<<arg1<<endl;
                 arg2 = fh.strip_quotes(arg2);
-                //cout<<arg2<<endl;
+                cout<<arg2<<endl;
                 
                 if(command=="--help" || command=="-h"){
                     fh.help();
